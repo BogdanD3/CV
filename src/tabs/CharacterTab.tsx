@@ -63,12 +63,12 @@ const RARITY: Record<string, { color: string; label: string }> = {
 };
 
 const UNLOCKED_BADGES = [
-  { icon: '/src/assets/icons/badgeIcons/TeamLeaderIcon.png', name: 'TEAM LEADER'     },
-  { icon: '/src/assets/icons/badgeIcons/ApiArchitectIcon.png', name: 'API ARCHITECT'   },
-  { icon: '/src/assets/icons/badgeIcons/ArchIcon.png', name: 'I USE ARCH BTW'   },
-  { icon: '/src/assets/icons/badgeIcons/DeadlineIcon.png', name: 'DEADLINE SLAYER' },
-  { icon: '/src/assets/icons/badgeIcons/BugHunterIcon.png', name: 'BUG HUNTER'       },
-  { icon: '/src/assets/icons/badgeIcons/CTFIcon.png', name: 'CTF VETERAN'  },
+  { icon: 'assets/icons/badgeIcons/TeamLeaderIcon.png', name: 'TEAM LEADER'     },
+  { icon: 'assets/icons/badgeIcons/ApiArchitectIcon.png', name: 'API ARCHITECT'   },
+  { icon: 'assets/icons/badgeIcons/ArchIcon.png', name: 'I USE ARCH BTW'   },
+  { icon: 'assets/icons/badgeIcons/DeadlineIcon.png', name: 'DEADLINE SLAYER' },
+  { icon: 'assets/icons/badgeIcons/BugHunterIcon.png', name: 'BUG HUNTER'       },
+  { icon: 'assets/icons/badgeIcons/CTFIcon.png', name: 'CTF VETERAN'  },
 ];
 
 const STAT_BARS = [

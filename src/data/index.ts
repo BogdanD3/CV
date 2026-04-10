@@ -125,8 +125,8 @@ export const ACHIEVEMENTS: Achievement[] = [
 ];
 
 export const LOOT_ITEMS: LootItem[] = [
-  { icon: '/src/assets/icons/contactIcons/InstagramIcon.png', platform: 'INSTAGRAM', handle: '@delicbogdan_', rarity: 'rare',   href: 'https://www.instagram.com/delicbogdan_' },
-  { icon: '/src/assets/icons/contactIcons/DiscordIcon.png', platform: 'DISCORD',   handle: 'BD30604',       rarity: 'epic',   href: 'https://discord.com/'},
-  { icon: '/src/assets/icons/contactIcons/GitHubIcon.png', platform: 'GITHUB',    handle: 'BogdanD3',      rarity: 'epic',   href: 'https://github.com/BogdanD3' },
-  { icon: '/src/assets/icons/contactIcons/FileIcon.png', platform: 'RESUME',    handle: 'Download CV',   rarity: 'epic',   href: '/src/assets/cv.pdf' },
+  { icon: 'assets/icons/contactIcons/InstagramIcon.png', platform: 'INSTAGRAM', handle: '@delicbogdan_', rarity: 'rare',   href: 'https://www.instagram.com/delicbogdan_' },
+  { icon: 'assets/icons/contactIcons/DiscordIcon.png', platform: 'DISCORD',   handle: 'BD30604',       rarity: 'epic',   href: 'https://discord.com/'},
+  { icon: 'assets/icons/contactIcons/GitHubIcon.png', platform: 'GITHUB',    handle: 'BogdanD3',      rarity: 'epic',   href: 'https://github.com/BogdanD3' },
+  { icon: 'assets/icons/contactIcons/FileIcon.png', platform: 'RESUME',    handle: 'Download CV',   rarity: 'epic',   href: '/src/assets/cv.pdf' },
 ];

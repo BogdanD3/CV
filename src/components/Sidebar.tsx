@@ -20,7 +20,7 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
           FULLSTACK DEV · LV.12<br />CS STUDENT · Y2
         </p>
         <img
-          src="/src/assets/1000058332.png"
+          src="assets/1000058332.png"
           alt="Character"
           className="w-full border border-[#3d2a6e]"
           style={{ imageRendering: 'pixelated' }}
