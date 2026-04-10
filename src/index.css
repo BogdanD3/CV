@@ -44,3 +44,16 @@
 .animate-blink     { animation: blink 1s step-end infinite; }
 .animate-twinkle   { animation: twinkle linear infinite; }
 .animate-fadeSlide { animation: fadeSlideIn 0.4s ease-out; }
+
+@keyframes glitchText {
+  0%, 89%, 100% { opacity: 1; text-shadow: none; color: #6b21a8; }
+  90% { opacity: 0.8; text-shadow: -2px 0 #ec4899, 2px 0 #14b8a6; color: #fff; }
+  92% { opacity: 1; text-shadow: 2px 0 #ec4899; }
+  94% { text-shadow: none; color: #6b21a8; }
+  96% { text-shadow: -2px 0 #14b8a6; color: #fff; }
+  98% { text-shadow: none; color: #6b21a8; }
+}
+
+.glitch {
+  animation: glitchText 4s infinite;
+}

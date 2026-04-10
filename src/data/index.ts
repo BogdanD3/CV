@@ -1,4 +1,9 @@
 import type { NavItem, SkillGroup, Quest, Achievement, LootItem } from '../types';
+import InstagramIcon from '../assets/icons/contactIcons/InstagramIcon.png'
+import DiscordIcon from '../assets/icons/contactIcons/DiscordIcon.png'
+import GitHubIcon from '../assets/icons/contactIcons/GitHubIcon.png'
+import FileIcon from '../assets/icons/contactIcons/FileIcon.png'
+import CV from '../assets/cv.pdf'
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'profile',      label: 'Profile',        icon: '👤' },
@@ -125,8 +130,8 @@ export const ACHIEVEMENTS: Achievement[] = [
 ];
 
 export const LOOT_ITEMS: LootItem[] = [
-  { icon: 'assets/icons/contactIcons/InstagramIcon.png', platform: 'INSTAGRAM', handle: '@delicbogdan_', rarity: 'rare',   href: 'https://www.instagram.com/delicbogdan_' },
-  { icon: 'assets/icons/contactIcons/DiscordIcon.png', platform: 'DISCORD',   handle: 'BD30604',       rarity: 'epic',   href: 'https://discord.com/'},
-  { icon: 'assets/icons/contactIcons/GitHubIcon.png', platform: 'GITHUB',    handle: 'BogdanD3',      rarity: 'epic',   href: 'https://github.com/BogdanD3' },
-  { icon: 'assets/icons/contactIcons/FileIcon.png', platform: 'RESUME',    handle: 'Download CV',   rarity: 'epic',   href: '/src/assets/cv.pdf' },
+  { icon: InstagramIcon, platform: 'INSTAGRAM', handle: '@delicbogdan_', rarity: 'rare',   href: 'https://www.instagram.com/delicbogdan_' },
+  { icon: DiscordIcon, platform: 'DISCORD',   handle: 'BD30604',       rarity: 'epic',   href: 'https://discord.com/'},
+  { icon: GitHubIcon, platform: 'GITHUB',    handle: 'BogdanD3',      rarity: 'epic',   href: 'https://github.com/BogdanD3' },
+  { icon: FileIcon, platform: 'RESUME',    handle: 'Download CV',   rarity: 'epic',   href: CV },
 ];

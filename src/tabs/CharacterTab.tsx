@@ -1,3 +1,11 @@
+import TeamLeaderIcon from '../assets/icons/badgeIcons/TeamLeaderIcon.png'
+import ApiArchitectIcon from '../assets/icons/badgeIcons/ApiArchitectIcon.png'
+import ArchIcon from '../assets/icons/badgeIcons/ArchIcon.png'
+import DeadlineIcon from '../assets/icons/badgeIcons/DeadlineIcon.png'
+import BugHunterIcon from '../assets/icons/badgeIcons/BugHunterIcon.png'
+import CTFIcon from '../assets/icons/badgeIcons/CTFIcon.png'
+import CharacterSprite from '../assets/1000058333.png'
+
 const JOURNEY = [
   {
     period: 'Late 2023',
@@ -63,12 +71,12 @@ const RARITY: Record<string, { color: string; label: string }> = {
 };
 
 const UNLOCKED_BADGES = [
-  { icon: 'assets/icons/badgeIcons/TeamLeaderIcon.png', name: 'TEAM LEADER'     },
-  { icon: 'assets/icons/badgeIcons/ApiArchitectIcon.png', name: 'API ARCHITECT'   },
-  { icon: 'assets/icons/badgeIcons/ArchIcon.png', name: 'I USE ARCH BTW'   },
-  { icon: 'assets/icons/badgeIcons/DeadlineIcon.png', name: 'DEADLINE SLAYER' },
-  { icon: 'assets/icons/badgeIcons/BugHunterIcon.png', name: 'BUG HUNTER'       },
-  { icon: 'assets/icons/badgeIcons/CTFIcon.png', name: 'CTF VETERAN'  },
+  { icon: TeamLeaderIcon, name: 'TEAM LEADER'     },
+  { icon: ApiArchitectIcon, name: 'API ARCHITECT'   },
+  { icon: ArchIcon, name: 'I USE ARCH BTW'   },
+  { icon: DeadlineIcon, name: 'DEADLINE SLAYER' },
+  { icon: BugHunterIcon, name: 'BUG HUNTER'       },
+  { icon: CTFIcon, name: 'CTF VETERAN'  },
 ];
 
 const STAT_BARS = [
@@ -104,21 +112,8 @@ export default function CharacterTab() {
           </span>
 
           {/* Glitchy subtitle */}
-          <p
-            className="font-pixel text-[6px] text-purple-600 tracking-widest mb-5 mt-1"
-            style={{ animation: 'glitchText 4s infinite' }}
-          >
+          <p className="font-pixel text-[6px] text-purple-600 tracking-widest mb-5 mt-1 glitch">
             {GLITCH_SUBTITLE}
-            <style>{`
-              @keyframes glitchText {
-                0%, 89%, 100% { opacity: 1; text-shadow: none; color: #6b21a8; }
-                90% { opacity: 0.8; text-shadow: -2px 0 #ec4899, 2px 0 #14b8a6; color: #fff; }
-                92% { opacity: 1; text-shadow: 2px 0 #ec4899; }
-                94% { text-shadow: none; color: #6b21a8; }
-                96% { text-shadow: -2px 0 #14b8a6; color: #fff; }
-                98% { text-shadow: none; color: #6b21a8; }
-              }
-            `}</style>
           </p>
 
           {/* Vertical rail */}
@@ -169,7 +164,7 @@ export default function CharacterTab() {
 
           {/* Sprite area — wide rectangle */}
         <img
-          src="/src/assets/1000058333.png"
+          src={CharacterSprite}
           alt="Character"
           className="w-full object-cover border-2 border-[#3d2a6e]"
           style={{ imageRendering: 'pixelated' }}
