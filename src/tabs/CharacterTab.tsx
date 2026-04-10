@@ -5,6 +5,12 @@ import DeadlineIcon from '../assets/icons/badgeIcons/DeadlineIcon.png'
 import BugHunterIcon from '../assets/icons/badgeIcons/BugHunterIcon.png'
 import CTFIcon from '../assets/icons/badgeIcons/CTFIcon.png'
 import CharacterSprite from '../assets/1000058333.png'
+import TypeScriptBladeIcon from '../assets/icons/gearIcons/TypeScriptBladeIcon.png'
+import ReactShellIcon from '../assets/icons/gearIcons/ReactShellIcon.png'
+import LaravelTomeIcon from '../assets/icons/gearIcons/LaravelTomeIcon.png'
+import LinuxRunnerIcon from '../assets/icons/gearIcons/LinuxRunnerIcon.png'
+import CyberVisorIcon from '../assets/icons/gearIcons/CyberVisorIcon.png'
+import GitRingIcon from '../assets/icons/gearIcons/GitRingIcon.png'
 
 const JOURNEY = [
   {
@@ -55,12 +61,12 @@ const JOURNEY = [
 ];
 
 const EQUIPPED = [
-  { slot: 'WEAPON',    icon: '🔷', item: 'TypeScript Blade',  rarity: 'epic',      desc: 'Type-safe components, strict interfaces, zero any' },
-  { slot: 'ARMOR',     icon: '⚛',  item: 'React Shell',       rarity: 'epic',      desc: 'Hooks, context, scalable component architecture' },
-  { slot: 'OFFHAND',   icon: '🔴', item: 'Laravel Tome',      rarity: 'rare',      desc: 'REST APIs, Eloquent ORM, full MVC backend' },
-  { slot: 'BOOTS',     icon: '🐧', item: 'Linux Runner',      rarity: 'rare',      desc: 'Nginx server setup, SSH, real deployment pipelines' },
-  { slot: 'HELM',      icon: '🔒', item: 'Cyber Visor [WIP]', rarity: 'legendary', desc: 'Secure auth, OWASP awareness, CTF training' },
-  { slot: 'ACCESSORY', icon: '🌿', item: 'Git Ring',          rarity: 'common',    desc: 'Branching, PRs, team workflows, clean commit history' },
+  { slot: 'WEAPON',    icon: TypeScriptBladeIcon, item: 'TypeScript Blade',  rarity: 'epic',      desc: 'Type-safe components, strict interfaces, zero any' },
+  { slot: 'ARMOR',     icon: ReactShellIcon,  item: 'React Shell',       rarity: 'epic',      desc: 'Hooks, context, scalable component architecture' },
+  { slot: 'OFFHAND',   icon: LaravelTomeIcon, item: 'Laravel Tome',      rarity: 'rare',      desc: 'REST APIs, Eloquent ORM, full MVC backend' },
+  { slot: 'BOOTS',     icon: LinuxRunnerIcon, item: 'Linux Runner',      rarity: 'rare',      desc: 'Nginx server setup, SSH, real deployment pipelines' },
+  { slot: 'HELM',      icon: CyberVisorIcon,  item: 'Cyber Visor [VIP]', rarity: 'legendary', desc: 'Secure auth, OWASP awareness, CTF training' },
+  { slot: 'ACCESSORY', icon: GitRingIcon,     item: 'Git Ring',          rarity: 'common',    desc: 'Branching, PRs, team workflows, clean commit history' },
 ];
 
 const RARITY: Record<string, { color: string; label: string }> = {
@@ -239,7 +245,7 @@ export default function CharacterTab() {
                 className="border border-[#3d2a6e] bg-[#0e0b1f] p-3 hover:border-violet-600 transition-colors"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[16px]">{gear.icon}</span>
+                  <img src={gear.icon} alt={gear.item} className="w-10 h-10 object-contain" />
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="font-pixel text-[5px] text-purple-600">{gear.slot}</span>
