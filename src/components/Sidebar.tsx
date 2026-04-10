@@ -18,7 +18,7 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
           <span className="animate-blink">_</span>
         </h2>
         <p className="font-pixel text-[8px] text-pink-400 leading-relaxed mb-3">
-          FULLSTACK DEV · LV.12<br />CS STUDENT · Y2
+          WEB DEVELOPER · LV.12<br />CS STUDENT · Y1
         </p>
         <img
           src={profileImg}

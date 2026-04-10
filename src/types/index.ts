@@ -24,6 +24,7 @@ export interface Quest {
   description: string;
   tags: string[];
   link?: string;
+  link2?: string;
 }
 
 export interface Achievement {

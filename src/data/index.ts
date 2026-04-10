@@ -36,80 +36,84 @@ export const FLOAT_ICONS = ['⚛', '🔷', '🐧', '⚡', '🌊', '🔴', '🐳'
 
 export const QUESTS: Quest[] = [
   {
-    title: 'MAIN QUEST: FOOD-SHARING PLATFORM',
+    title: 'MAIN QUEST: E-COMMERCE WEBSITE',
     status: 'active',
     description:
-      'Fully custom e-commerce website for food sharing. Laravel backend + React/TS frontend. Fast, responsive design with integrated admin panel for full client control over content. Custom features including Excel-to-database upload.',
-    tags: ['Laravel', 'React', 'TypeScript', 'MySQL', 'Admin Panel'],
+      'Fully custom e-commerce website for electrical supply company. Laravel backend + React/TS frontend. Fast, responsive design with integrated admin panel for full client control over content. Custom features including Excel-to-database upload.',
+    tags: ['Laravel', 'React', 'TypeScript', 'Hosting', 'MySQL', 'Admin Panel'],
+    link: 'https://elektrosaraf.me'
   },
   {
     title: 'SIDE QUEST: STUDENT EXAM SCHEDULER',
     status: 'in-progress',
     description:
       'Software solution for students that simplifies the exam scheduling process. Collaborative team project focused on UX and practical utility.',
-    tags: ['React', 'TypeScript', 'REST API'],
-  },
-  {
-    title: 'COMPLETED: TEAM FRONTEND LEAD · Y1',
-    status: 'complete',
-    description:
-      'Led a 7-member team and took primary responsibility for the entire frontend of a responsive web app. Built type-safe React + TypeScript components, integrated Ant Design, and designed custom RESTful APIs. Delivered high-quality features under tight deadlines.',
-    tags: ['React', 'TypeScript', 'Ant Design', 'REST API', 'Team Lead'],
+    tags: ['React Native', 'Expo', 'UX Design'],
   },
   {
     title: 'COMPLETED: CV WEBSITE V1',
     status: 'complete',
     description:
-      'Designed and deployed personal CV website. React + Vite + Tailwind. Showcases frontend skills and UI design sensibility.',
+    'Designed and deployed personal CV website. React + Vite + Tailwind. Showcases frontend skills and UI design sensibility.',
     tags: ['React', 'Vite', 'Tailwind', 'GitHub Pages'],
     link: 'https://bogdand3.github.io/CV-WebSite/',
   },
+  {
+    title: 'COMPLETED: CORTEX PROJECTS YEAR 1',
+    status: 'complete',
+    description:
+      'First website developed in Cortex summer practice and a website built for first year\'s competition. Built type-safe React + TypeScript components, integrated Ant Design and Axios for more efficient code. Delivered high-quality features under tight deadlines.',
+    tags: ['React', 'TypeScript', 'Ant Design', 'Axios', 'Team Lead'],
+    link: 'https://github.com/BogdanD3/online-library',
+    link2: 'https://github.com/BogdanD3/takmicenje-tim-5'
+  },
 ];
 
+const BASE = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
 export const SKILL_GROUPS: SkillGroup[] = [
   {
     label: 'FRONT-END',
     skills: [
-      { name: 'HTML / CSS',   icon: '🌐', level: 5, maxGold: 5 },
-      { name: 'JavaScript',   icon: '⚡', level: 5, maxGold: 4 },
-      { name: 'TypeScript',   icon: '🔷', level: 5, maxGold: 4 },
-      { name: 'React',        icon: '⚛',  level: 5, maxGold: 4 },
-      { name: 'Tailwind',     icon: '🌊', level: 5, maxGold: 4 },
-      { name: 'Node.js',      icon: '🟩', level: 5, maxGold: 3 },
+      { name: 'HTML / CSS',  icon: `${BASE}/html5/html5-original.svg`,         level: 5, maxGold: 5 },
+      { name: 'JavaScript',  icon: `${BASE}/javascript/javascript-original.svg`, level: 5, maxGold: 4 },
+      { name: 'TypeScript',  icon: `${BASE}/typescript/typescript-original.svg`, level: 5, maxGold: 4 },
+      { name: 'React',       icon: `${BASE}/react/react-original.svg`,           level: 5, maxGold: 4 },
+      { name: 'Tailwind',    icon: `${BASE}/tailwindcss/tailwindcss-original.svg`, level: 5, maxGold: 4 },
+      { name: 'Node.js',     icon: `${BASE}/nodejs/nodejs-original.svg`,         level: 5, maxGold: 3 },
     ],
   },
   {
     label: 'BACK-END',
     skills: [
-      { name: 'PHP',      icon: '🐘', level: 5, maxGold: 3 },
-      { name: 'Laravel',  icon: '🔴', level: 5, maxGold: 3 },
-      { name: 'Python',   icon: '🐍', level: 5, maxGold: 3 },
-      { name: 'MySQL',    icon: '🗄',  level: 5, maxGold: 3 },
-      { name: 'Firebase', icon: '🔥', level: 5, maxGold: 2 },
+      { name: 'PHP',      icon: `${BASE}/php/php-original.svg`,         level: 5, maxGold: 3 },
+      { name: 'Laravel',  icon: `${BASE}/laravel/laravel-original.svg`, level: 5, maxGold: 3 },
+      { name: 'Python',   icon: `${BASE}/python/python-original.svg`,   level: 5, maxGold: 3 },
+      { name: 'MySQL',    icon: `${BASE}/mysql/mysql-original.svg`,     level: 5, maxGold: 3 },
+      { name: 'Firebase', icon: `${BASE}/firebase/firebase-original.svg`, level: 5, maxGold: 2 },
     ],
   },
   {
     label: 'TECH STACK',
     skills: [
-      { name: 'C / C++',  icon: '⚙️', level: 5, maxGold: 4 },
-      { name: 'Java',     icon: '☕', level: 5, maxGold: 3 },
-      { name: 'Linux',    icon: '🐧', level: 5, maxGold: 4 },
-      { name: 'Git',      icon: '🌿', level: 5, maxGold: 4 },
-      { name: 'Docker',   icon: '🐳', level: 5, maxGold: 2 },
-      { name: 'Lua',      icon: '🌙', level: 5, maxGold: 3 },
+      { name: 'C / C++', icon: `${BASE}/cplusplus/cplusplus-original.svg`, level: 5, maxGold: 4 },
+      { name: 'Java',    icon: `${BASE}/java/java-original.svg`,            level: 5, maxGold: 3 },
+      { name: 'Linux',   icon: `${BASE}/linux/linux-original.svg`,          level: 5, maxGold: 4 },
+      { name: 'Git',     icon: `${BASE}/git/git-original.svg`,              level: 5, maxGold: 4 },
+      { name: 'Docker',  icon: `${BASE}/docker/docker-original.svg`,        level: 5, maxGold: 2 },
+      { name: 'Lua',     icon: `${BASE}/lua/lua-original.svg`,              level: 5, maxGold: 3 },
     ],
   },
   {
     label: 'TOOLS & LIBRARIES',
     skills: [
-      { name: 'Redux',       icon: '📦', level: 5, maxGold: 3 },
-      { name: 'Vite',        icon: '⚡', level: 5, maxGold: 4 },
-      { name: 'Postman',     icon: '📮', level: 5, maxGold: 4 },
-      { name: 'Figma',       icon: '🎨', level: 5, maxGold: 4 },
-      { name: 'Photoshop',   icon: '🖼',  level: 5, maxGold: 3 },
-      { name: 'Ant Design',  icon: '🦠', level: 5, maxGold: 4 },
-      { name: 'Bootstrap',   icon: '🅱',  level: 5, maxGold: 3 },
-      { name: 'Axios',       icon: '🔗', level: 5, maxGold: 4 },
+      { name: 'Redux',      icon: `${BASE}/redux/redux-original.svg`,         level: 5, maxGold: 3 },
+      { name: 'Vite',       icon: `${BASE}/vitejs/vitejs-original.svg`,       level: 5, maxGold: 4 },
+      { name: 'Postman',    icon: `${BASE}/postman/postman-original.svg`,     level: 5, maxGold: 4 },
+      { name: 'Figma',      icon: `${BASE}/figma/figma-original.svg`,         level: 5, maxGold: 3 },
+      { name: 'Photoshop',  icon: `${BASE}/photoshop/photoshop-original.svg`, level: 5, maxGold: 4 },
+      { name: 'Ant Design', icon: `${BASE}/antdesign/antdesign-original.svg`, level: 5, maxGold: 4 },
+      { name: 'Bootstrap',  icon: `${BASE}/bootstrap/bootstrap-original.svg`, level: 5, maxGold: 3 },
+      { name: 'Axios',      icon: `${BASE}/axios/axios-plain.svg`,            level: 5, maxGold: 4 },
     ],
   },
 ];

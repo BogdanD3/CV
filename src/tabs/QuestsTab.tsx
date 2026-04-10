@@ -36,6 +36,15 @@ function QuestCard({ quest }: { quest: Quest }) {
       >
         ▸ VIEW PROJECT
       </button>
+      {quest.link2 && (
+        <button
+          onClick={() => window.open(quest.link2, '_blank')}
+          className="ml-2 font-pixel text-[5px] px-3 py-[5px] border border-pink-500 text-pink-400
+            hover:bg-pink-500 hover:text-white transition-colors"
+        >
+          ▸ VIEW PROJECT 2
+        </button>
+      )}
     </div>
   );
 }

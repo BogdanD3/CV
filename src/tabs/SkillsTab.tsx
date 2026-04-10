@@ -4,9 +4,9 @@ import PipRow from '../components/PipRow';
 
 function SkillCard({ skill }: { skill: Skill }) {
   return (
-    <div className="border border-[#3d2a6e] bg-[#110d28] p-3 text-center
+    <div className="border border-[#3d2a6e] bg-[#110d28] p-3 text-center flex flex-col items-center
       transition-all hover:border-fuchsia-600 hover:bg-[#1a1040] group cursor-default">
-      <div className="text-[36px] mb-1">{skill.icon}</div>
+      <img src={skill.icon} width={40} height={40} alt={skill.name} className="mb-2"/>
       <p className="font-pixel text-[6px] text-purple-400 mb-1 group-hover:text-pink-400 transition-colors">
         {skill.name}
       </p>
