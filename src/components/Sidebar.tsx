@@ -1,5 +1,6 @@
 import type { TabId } from '../types';
 import { NAV_ITEMS } from '../data';
+import profileImg from '../assets/1000058332.png';
 
 interface Props {
   activeTab: TabId;
@@ -20,7 +21,7 @@ export default function Sidebar({ activeTab, onTabChange }: Props) {
           FULLSTACK DEV · LV.12<br />CS STUDENT · Y2
         </p>
         <img
-          src="assets/1000058332.png"
+          src={profileImg}
           alt="Character"
           className="w-full border border-[#3d2a6e]"
           style={{ imageRendering: 'pixelated' }}
