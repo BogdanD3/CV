@@ -62,11 +62,11 @@ const JOURNEY = [
 
 const EQUIPPED = [
   { slot: 'WEAPON',    icon: TypeScriptBladeIcon, item: 'TypeScript Blade',  rarity: 'epic',      desc: 'Type-safe components, strict interfaces, zero any' },
-  { slot: 'ARMOR',     icon: ReactShellIcon,  item: 'React Shell',       rarity: 'epic',      desc: 'Hooks, context, scalable component architecture' },
-  { slot: 'OFFHAND',   icon: LaravelTomeIcon, item: 'Laravel Tome',      rarity: 'rare',      desc: 'REST APIs, Eloquent ORM, full MVC backend' },
-  { slot: 'BOOTS',     icon: LinuxRunnerIcon, item: 'Linux Runner',      rarity: 'rare',      desc: 'Nginx server setup, SSH, real deployment pipelines' },
-  { slot: 'HELM',      icon: CyberVisorIcon,  item: 'Cyber Visor [VIP]', rarity: 'legendary', desc: 'Secure auth, OWASP awareness, CTF training' },
-  { slot: 'ACCESSORY', icon: GitRingIcon,     item: 'Git Ring',          rarity: 'common',    desc: 'Branching, PRs, team workflows, clean commit history' },
+  { slot: 'ARMOR',     icon: ReactShellIcon,      item: 'React Shell',       rarity: 'epic',      desc: 'Hooks, context, scalable component architecture' },
+  { slot: 'OFFHAND',   icon: LaravelTomeIcon,     item: 'Laravel Tome',      rarity: 'rare',      desc: 'REST APIs, Eloquent ORM, full MVC backend' },
+  { slot: 'BOOTS',     icon: LinuxRunnerIcon,     item: 'Linux Runner',      rarity: 'rare',      desc: 'Nginx server setup, SSH, real deployment pipelines' },
+  { slot: 'HELM',      icon: CyberVisorIcon,      item: 'Cyber Visor [VIP]', rarity: 'legendary', desc: 'Secure auth, OWASP awareness, CTF training' },
+  { slot: 'ACCESSORY', icon: GitRingIcon,         item: 'Git Ring',          rarity: 'common',    desc: 'Branching, PRs, team workflows, clean commit history' },
 ];
 
 const RARITY: Record<string, { color: string; label: string }> = {
@@ -77,12 +77,12 @@ const RARITY: Record<string, { color: string; label: string }> = {
 };
 
 const UNLOCKED_BADGES = [
-  { icon: TeamLeaderIcon, name: 'TEAM LEADER'     },
-  { icon: ApiArchitectIcon, name: 'API ARCHITECT'   },
-  { icon: ArchIcon, name: 'I USE ARCH BTW'   },
-  { icon: DeadlineIcon, name: 'DEADLINE SLAYER' },
-  { icon: BugHunterIcon, name: 'BUG HUNTER'       },
-  { icon: CTFIcon, name: 'CTF VETERAN'  },
+  { icon: TeamLeaderIcon,  name: 'TEAM LEADER'     },
+  { icon: ApiArchitectIcon, name: 'API ARCHITECT'  },
+  { icon: ArchIcon,        name: 'I USE ARCH BTW'  },
+  { icon: DeadlineIcon,    name: 'DEADLINE SLAYER' },
+  { icon: BugHunterIcon,   name: 'BUG HUNTER'      },
+  { icon: CTFIcon,         name: 'CTF VETERAN'     },
 ];
 
 const STAT_BARS = [
@@ -94,12 +94,12 @@ const STAT_BARS = [
 ];
 
 const TRAITS = [
-  { label: 'Fast learner',         icon: '⚡' },
-  { label: 'Detail-oriented',      icon: '🔍' },
-  { label: 'Team player',          icon: '🤝' },
-  { label: 'Self-driven',          icon: '🎯' },
-  { label: 'Deadline-reliable',    icon: '📅' },
-  { label: 'Clean code advocate',  icon: '✨' },
+  { label: 'Fast learner',        icon: '⚡' },
+  { label: 'Detail-oriented',     icon: '🔍' },
+  { label: 'Team player',         icon: '🤝' },
+  { label: 'Self-driven',         icon: '🎯' },
+  { label: 'Deadline-reliable',   icon: '📅' },
+  { label: 'Clean code advocate', icon: '✨' },
 ];
 
 const GLITCH_SUBTITLE = 'FROM FIRST HTML TAG TO FULL-STACK SYSTEMS';
@@ -108,8 +108,8 @@ export default function CharacterTab() {
   return (
     <div className="flex flex-col gap-6">
 
-      {/* TOP — Journey left, Character right */}
-      <div className="grid grid-cols-2 gap-4 items-start">
+      {/* TOP — Journey left, Character right — stacks on mobile */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
 
         {/* LEFT — Timeline */}
         <div className="relative border border-[#3d2a6e] bg-[#16112e] p-5">
@@ -117,12 +117,10 @@ export default function CharacterTab() {
             &gt; DEVELOPMENT JOURNEY
           </span>
 
-          {/* Glitchy subtitle */}
           <p className="font-pixel text-[6px] text-purple-600 tracking-widest mb-5 mt-1 glitch">
             {GLITCH_SUBTITLE}
           </p>
 
-          {/* Vertical rail */}
           <div className="absolute left-[28px] top-[72px] bottom-6 w-[2px] bg-[#3d2a6e]" />
 
           <div className="flex flex-col gap-7">
@@ -153,7 +151,6 @@ export default function CharacterTab() {
               </div>
             ))}
 
-            {/* Locked next */}
             <div className="flex gap-4 relative">
               <div className="w-8 h-8 border-2 border-dashed border-[#3d2a6e] flex items-center justify-center text-[14px] bg-[#0e0b1f] flex-shrink-0 z-10">
                 ❓
@@ -168,17 +165,16 @@ export default function CharacterTab() {
         {/* RIGHT — Character */}
         <div className="flex flex-col gap-4">
 
-          {/* Sprite area — wide rectangle */}
-        <img
-          src={CharacterSprite}
-          alt="Character"
-          className="w-full object-cover border-2 border-[#3d2a6e]"
-          style={{ imageRendering: 'pixelated' }}
-        />
+          <img
+            src={CharacterSprite}
+            alt="Character"
+            className="w-full object-cover border-2 border-[#3d2a6e]"
+            style={{ imageRendering: 'pixelated' }}
+          />
 
-          {/* Stats + Traits box */}
+          {/* Stats + Traits — stacks on mobile, side-by-side on sm+ */}
           <div className="border border-[#3d2a6e] bg-[#16112e] p-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
               {/* Stat bars */}
               <div>
@@ -199,7 +195,7 @@ export default function CharacterTab() {
                 </div>
               </div>
 
-              {/* Personal traits */}
+              {/* Traits */}
               <div>
                 <p className="font-pixel text-[5px] text-teal-400 tracking-widest mb-3">▸ TRAITS</p>
                 <div className="flex flex-col gap-2">
@@ -233,10 +229,10 @@ export default function CharacterTab() {
         </div>
       </div>
 
-      {/* BOTTOM — Equipped gear */}
+      {/* BOTTOM — Equipped gear — stacks on mobile, 2 cols on sm+ */}
       <div className="border border-[#3d2a6e] bg-[#16112e] p-4">
         <p className="font-pixel text-[6px] text-amber-400 tracking-widest mb-3">▸ EQUIPPED GEAR</p>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {EQUIPPED.map((gear) => {
             const r = RARITY[gear.rarity];
             return (
@@ -249,11 +245,11 @@ export default function CharacterTab() {
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="font-pixel text-[5px] text-purple-600">{gear.slot}</span>
-                        <span
-                          className="font-pixel text-[5px] px-1 py-[2px] border leading-none"
-                          style={{ color: r.color, borderColor: r.color }}
-                        >
-                          {r.label}
+                      <span
+                        className="font-pixel text-[5px] px-1 py-[2px] border leading-none"
+                        style={{ color: r.color, borderColor: r.color }}
+                      >
+                        {r.label}
                       </span>
                     </div>
                     <p className="font-pixel text-[6px] text-white mt-[2px]">{gear.item}</p>
