@@ -49,6 +49,7 @@ export const QUESTS: Quest[] = [
     description:
       'Software solution for students that simplifies the exam scheduling process. Collaborative team project focused on UX and practical utility.',
     tags: ['React Native', 'Expo', 'UX Design'],
+    link: 'https://github.com/BogdanD3/UniPortal',
   },
   {
     title: 'COMPLETED: CV WEBSITE V1',
