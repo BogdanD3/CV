@@ -20,7 +20,7 @@ export default function ProfileTab({ onNavigate }: Props) {
           &gt; PROFILE.TXT
         </span>
         <p className="font-vt text-[20px] text-purple-100 leading-relaxed">
-          I'm a full-stack developer with a strong front-end foundation, focused on building
+          I'm a web developer with a strong front-end foundation, focused on building
           efficient, user-centered web applications. I work confidently with modern technologies
           across the stack, combining clean design with solid functionality.
           <br /><br />

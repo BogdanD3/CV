@@ -55,7 +55,7 @@ export default function GlitchTitle({ text }: Props) {
         <span className="animate-blink">_</span>
       </h1>
       <p className="font-pixel text-[8px] text-violet-400 mt-2 tracking-widest">
-        FULLSTACK DEVELOPER · CS STUDENT
+        WEB DEVELOPER · CS STUDENT
       </p>
       <p className="font-pixel text-[7px] text-teal-400 mt-1">
         📍 PODGORICA, MONTENEGRO 🇲🇪
